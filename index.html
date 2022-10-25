@@ -2,22 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./chatbot1.css">
-    <title>RASA ChatBot</title>
-    <div class="landing-page">
-    <div class="container">
+   <link rel="stylesheet" href="./chatbot1.css">
+<div class="landing-page">
+  <div class="container">
     <div class="header-area">
-    <div class="logo">  <span id='date'></span></div>
-    <div>
-    </div>
+      <div class="logo">  <span id='date'></span></div>
+      <div id="Date">
+        
+  
+
+<script>
+date = new Date().toLocaleDateString();
+document.write(date);
+</script>
+ 
+<body>
+
+    <div id="clock">8:10:45</div>
+ 
+    <script>
+        setInterval(showTime, 1000);
+        function showTime() {
+            let time = new Date();
+            let hour = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+            am_pm = "AM";
+ 
+            if (hour > 12) {
+                hour -= 12;
+                am_pm = "PM";
+            }
+            if (hour == 0) {
+                hr = 12;
+                am_pm = "AM";
+            }
+ 
+            hour = hour < 10 ? "0" + hour : hour;
+            min = min < 10 ? "0" + min : min;
+            sec = sec < 10 ? "0" + sec : sec;
+ 
+            let currentTime = hour + ":"
+                + min + ":" + sec + am_pm;
+ 
+            document.getElementById("clock")
+                .innerHTML = currentTime;
+        }
+ 
+        showTime();
+    </script>
+</div>
+   
       <ul class="links">
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Work</li>
-        <li>Info</li>
-        <li>Visit Official Website</li>
+        <li> <a href="https://www.keralauniversity.ac.in/"  target="_blank" rel="noopener noreferrer"> Visit Official Website </a></li>
       </ul>
     </div>
     <div class="image">
@@ -25,11 +62,13 @@
     </div>
     <div class="info">
       <h1>UNIVERSITY OF KERALA </h1>
-      <p>Current Date and Time is <span id='date'></span>.</p>
       <h3>PG CSS Admission</h3>
-      <p>This is a Chatbot powered by RASA. We are delighted to help you with any questions regarding the admission process.</p>
-      <button>Button name</button>
+      <p>This is a Chatbot powered by RASA. We are delighted to help you with any questions regarding the admission process.This chatbot uses Natural Language Processing and Machine Learning. </p>
     </div>
+
+    <div class="clearfix"></div>
+  </div>
+</div>
 
 </head>
 
@@ -40,7 +79,7 @@
     <script src="./chatbot-ui.js"></script>
     <script>
         createChatBot(host = 'http://localhost:5005/webhooks/rest/webhook', botLogo = "./imgs/bot-logo2",
-            title = "KU-BOT", welcomeMessage = "Hey, I am KU-BOT ", welcomeMessage = "I can help you get the details of all ",inactiveMsg = "Oops...Try Rephrasing..or Contact 9567XXXXXX", theme = "purple")
+            title = "KU-BOT", welcomeMessage = "Hey, I am KU-BOT ", welcomeMessage = "I can help you get the details of all PG CSS Departents.",inactiveMsg = "Oops...Try Rephrasing..or Contact 9567XXXXXX", theme = "green")
     </script>
 
 
