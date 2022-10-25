@@ -4,7 +4,12 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    background-image:
+      url('https://www.keralauniversity.ac.in/digital_garden/images/ku.jpg');
+    background-size: 100% 500px;
+    background-repeat: no-repeat;
 }
+
 
 .container {
     width: 1110px;
@@ -14,11 +19,20 @@ body {
 }
 
 /* Start Landing Page */
-
+ #clock {
+            font-size: 20px;
+            width: 100px;
+            margin: 2px;
+            text-align: left;
+           center:10px;
+            padding: 10px 0 0;
+        }
 .landing-page {
     position: relative;
-    background-color: #FFF;
+    
+    
 }
+
 
 .landing-page .header-area {
     display: flex;
@@ -54,14 +68,14 @@ body {
     border: 0;
     border-radius: 20px;
     padding: 10px 18px;
-    color: #FFF;
-    background-color: #6c63ff;
+    color: #ffffff;
+    background-color: #70b673;
 }
 
 .landing-page .info {
-    width: 55%;
+    width: 65%;
     float: left;
-    margin-top: 40px;
+    margin-top: 0px;
 }
 
 .landing-page .info h1 {
@@ -96,7 +110,7 @@ body {
 
 .landing-page .image {
     width: 15%;
-    margin-top: 85px;
+    margin-top: 450px;
 }
 
 .landing-page .image img {
@@ -117,11 +131,11 @@ body {
 :root {
     --chat-window-total-width: 380px;
     --chat-window-height: 500px;
-    --chat-window-color-theme: #6c63ff;
+    --chat-window-color-theme:  #70b673;
     --chat-window-bg-color: #fff;
-    --chat-send-button: #6c63ff;
+    --chat-send-button:  #70b673;
     --chat-user-msg-bg: #ddd;
-    --chat-header-bg: linear-gradient(160deg, dodgerblue 0%, #6c63ff 100%);
+    --chat-header-bg: linear-gradient(160deg,  10%,  #264d00 100%);
 }
 
 .chat-btn {
@@ -317,4 +331,7 @@ body {
         width: 80vw;
         height: 100%;
     }
+
+  }
+    
 }
